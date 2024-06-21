@@ -12,9 +12,9 @@ load_dotenv()
 
 app = Flask(__name__)
 
-model_url = 'https://storage.googleapis.com/model-ecomate-bucket/machine-learning-model/wasteclassifierv2.h5'
+model_url = 'YOUR_MODEL_URL'
 
-model_path = tf.keras.utils.get_file("wasteclassifierv2.h5", model_url)
+model_path = tf.keras.utils.get_file("YOUR_MODEL_FILE", model_url)
 
 if model_path is None:
     raise ValueError("model not found")
